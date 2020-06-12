@@ -1,0 +1,14 @@
+<ion-item style="margin-top: 5px;" mode="ios" lines="none">
+  
+  <ion-label style="margin-bottom: 3px;" mode="ios">
+    <ion-text mode="ios">
+      <h2 class="bold fs-18"> Welcome to contact management solution</h2>
+      <p class="fs-12"> Last name is:<b>{{this.lastName}}</b> </p> <ion-button (click)="deleteLastName()">Delete last name</ion-button>
+      
+      <ion-button><a target="_blank" rel="noopener noreferrer" href="/home/edit">edit last name</a></ion-button>
+      <p class="fs-12">First name is:<b>{{this.firstName}}</b></p> <ion-button (click)="deleteFirstName()">Delete first name</ion-button>
+      <ion-button><a target="_blank" rel="noopener noreferrer" href="/home/edit">edit first name</a></ion-button>
+    </ion-text>
+  </ion-label>
+ 
+</ion-item>

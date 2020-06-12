@@ -1,0 +1,28 @@
+<form  [formGroup]="contact_form">
+  <ion-item lines="none">
+    <ion-label  position="stacked" color="dark">First Name</ion-label>
+    <ion-input type="text" placeholder="first name" formControlName="firstName"></ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.firstName">
+      <div class="error-message" *ngIf="contact_form.get('firstName').hasError(validation.type) && (contact_form.get('firstName').dirty || contact_form.get('firstName').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+  <ion-item lines="none">
+    <ion-label  position="stacked" color="dark">last Name</ion-label>
+    <ion-input type="text" placeholder="last name" formControlName="lastName"></ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.lastName">
+      <div class="error-message" *ngIf="contact_form.get('lastName').hasError(validation.type) && (contact_form.get('lastName').dirty || contact_form.get('lastName').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+
+  <ion-button (click)="getContact()">
+    submit
+  </ion-button>
+</form>
