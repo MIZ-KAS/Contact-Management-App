@@ -1,6 +1,6 @@
-<form  [formGroup]="contact_form">
+<form  [formGroup]="contact_form" style="margin: 20px 500px;">
   <ion-item lines="none">
-    <ion-label  position="stacked" color="dark">First Name</ion-label>
+    <ion-label  position="stacked" color="dark" >First Name</ion-label>
     <ion-input type="text" placeholder="first name" formControlName="firstName"></ion-input>
   </ion-item>
   <div class="validation-errors">
@@ -11,7 +11,7 @@
     </ng-container>
   </div>
   <ion-item lines="none">
-    <ion-label  position="stacked" color="dark">last Name</ion-label>
+    <ion-label  position="stacked" color="dark" >last Name</ion-label>
     <ion-input type="text" placeholder="last name" formControlName="lastName"></ion-input>
   </ion-item>
   <div class="validation-errors">
@@ -22,7 +22,7 @@
     </ng-container>
   </div>
 
-  <ion-button (click)="getContact()">
+  <ion-button (click)="getContact()" >
     submit
   </ion-button>
 </form>
